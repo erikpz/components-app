@@ -1,9 +1,18 @@
+import 'package:components_app/pages/alert_page.dart';
 import 'package:flutter/material.dart';
-import 'package:components_app/pages/home_page.dart';
+import 'package:components_app/routes/routes.dart';
 
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return HomePage();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: getRouter(),
+      onGenerateRoute: (RouteSettings settings) {
+        print('Ruta: ${settings.name}');
+        return MaterialPageRoute(builder: (context) => AlertPage());
+      },
+    );
   }
 }
