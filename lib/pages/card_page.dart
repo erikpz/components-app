@@ -5,6 +5,7 @@ class CardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(41, 50, 65, 1),
         title: Text('Cards Page'),
       ),
       body: ListView(
