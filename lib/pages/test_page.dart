@@ -18,7 +18,7 @@ class _TestState extends State<TestPage> {
         body: Center(
           child: Container(
             padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(color: Colors.blueGrey),
+            decoration: BoxDecoration(color: Colors.blue[200]),
             width: 100,
             height: 70,
             child: Container(
