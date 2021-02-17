@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/display_counter.dart';
 
 class TestPage extends StatefulWidget {
   @override
@@ -6,6 +7,13 @@ class TestPage extends StatefulWidget {
 }
 
 class _TestState extends State<TestPage> {
+  int _counter = 0;
+  void handleAdd() {
+    setState(() {
+      _counter++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,16 +24,12 @@ class _TestState extends State<TestPage> {
           backgroundColor: Color.fromRGBO(41, 50, 65, 1),
         ),
         body: Center(
-          child: Container(
-            padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(color: Colors.blue[200]),
-            width: 100,
-            height: 70,
-            child: Container(
-                alignment: Alignment.center,
-                decoration: BoxDecoration(color: Colors.green[100]),
-                child: Text('Hello!')),
-          ),
-        ));
+            child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            DisplayCounter(count: _counter),
+            Incrementor(handleAdd: handleAdd)
+          ],
+        )));
   }
 }

@@ -18,16 +18,24 @@ class AlertPage extends StatelessWidget {
                 context: context,
                 builder: (BuildContext context) {
                   return AlertDialog(
-                      title: Text('Title'),
-                      content: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Container(
-                              child: Text(
-                                  'More content Lorem ipsum dolor atae...')),
-                          FlutterLogo(size: 100.0),
-                        ],
-                      ));
+                    title: Text('Title'),
+                    content: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Container(
+                            child:
+                                Text('More content Lorem ipsum dolor atae...')),
+                        FlutterLogo(size: 100.0),
+                      ],
+                    ),
+                    actions: [
+                      TextButton(
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: Text('Ok'))
+                    ],
+                  );
                 });
           },
         ),

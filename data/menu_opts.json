@@ -20,6 +20,11 @@
             "ruta" : "test",
             "icon" : "accesibility",
             "texto": "Test"
+        },
+        {
+            "ruta" : "animatedContainer",
+            "icon" : "donut_large",
+            "texto": "Animated Container"
         }
     ]
 }
