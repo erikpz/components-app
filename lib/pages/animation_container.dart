@@ -1,6 +1,5 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class AnimContainer extends StatefulWidget {
   @override
@@ -16,7 +15,9 @@ class _AnimatedContainerState extends State<AnimContainer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Animated Container')),
+      appBar: AppBar(
+          title: Text('Animated Container'),
+          backgroundColor: Color.fromRGBO(41, 50, 65, 1)),
       body: Center(
         child: AnimatedContainer(
           duration: Duration(milliseconds: 1000),

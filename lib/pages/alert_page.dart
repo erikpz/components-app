@@ -4,7 +4,6 @@ class AlertPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white70,
       appBar: AppBar(
           title: Text('Alert Page'),
           backgroundColor: Color.fromRGBO(41, 50, 65, 1)),
