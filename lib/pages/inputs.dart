@@ -10,6 +10,8 @@ class _InputsState extends State<InputsPage> {
   String _password = '';
   String _email = '';
   String _fecha = '';
+  List<String> _colores = ['Azul', 'Rojo', 'Morado'];
+  String _colorSelected = 'Azul';
   TextEditingController _inputDateController = TextEditingController();
 
   @override
@@ -29,6 +31,8 @@ class _InputsState extends State<InputsPage> {
           _crearEmail(),
           SizedBox(height: 20.0),
           _crearFecha(context),
+          SizedBox(height: 20.0),
+          _crearDropdown(),
           Divider(),
           _mostrarCampo(campo: _nombre, nombre: 'Nombre'),
           Divider(),
@@ -122,7 +126,7 @@ class _InputsState extends State<InputsPage> {
     );
   }
 
-  _selectDate(BuildContext context) async {
+  void _selectDate(BuildContext context) async {
     DateTime picked = await showDatePicker(
         context: context,
         initialDate: DateTime.now(),
@@ -134,5 +138,25 @@ class _InputsState extends State<InputsPage> {
         _inputDateController.text = _fecha;
       });
     }
+  }
+
+  List<DropdownMenuItem<String>> _obtenerOpciones() {
+    List<DropdownMenuItem<String>> lista = List();
+    _colores.forEach((element) {
+      lista.add(DropdownMenuItem(
+        child: Text(element),
+        value: element,
+      ));
+    });
+    return lista;
+  }
+
+  Widget _crearDropdown() {
+    return DropdownButton(
+        value: _colorSelected,
+        items: _obtenerOpciones(),
+        onChanged: (opt) {
+          _colorSelected = opt;
+        });
   }
 }

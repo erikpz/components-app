@@ -30,6 +30,17 @@
             "ruta" : "inputs",
             "icon" : "donut_large",
             "texto": "Inputs Fields"
+        },
+        {
+            "ruta" : "slider",
+            "icon" : "donut_large",
+            "texto": "Slider"
+        },
+        {
+            "ruta" : "listView",
+            "icon" : "donut_large",
+            "texto": "ListView"
         }
+        
     ]
 }

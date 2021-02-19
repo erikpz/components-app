@@ -10,7 +10,6 @@ class App extends StatelessWidget {
       initialRoute: '/',
       routes: getRouter(),
       onGenerateRoute: (RouteSettings settings) {
-        print('Ruta: ${settings.name}');
         return MaterialPageRoute(builder: (context) => AlertPage());
       },
     );

@@ -6,6 +6,8 @@ import 'package:components_app/pages/home_page.dart';
 import 'package:components_app/pages/test_page.dart';
 import 'package:components_app/pages/animation_container.dart';
 import 'package:components_app/pages/inputs.dart';
+import 'package:components_app/pages/slider_page.dart';
+import 'package:components_app/pages/list_view.dart';
 
 Map<String, WidgetBuilder> getRouter() {
   return <String, WidgetBuilder>{
@@ -16,5 +18,7 @@ Map<String, WidgetBuilder> getRouter() {
     'test': (BuildContext context) => TestPage(),
     'animatedContainer': (BuildContext context) => AnimContainer(),
     'inputs': (BuildContext context) => InputsPage(),
+    'slider': (BuildContext context) => SliderPage(),
+    'listView': (BuildContext context) => ListViewPage(),
   };
 }
