@@ -17,19 +17,19 @@ class _TestState extends State<TestPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white70,
-        appBar: AppBar(
-          elevation: 20.0,
-          title: Text('Test'),
-          backgroundColor: Color.fromRGBO(41, 50, 65, 1),
+      backgroundColor: Colors.white70,
+      appBar: AppBar(
+        elevation: 20.0,
+        title: Text('Test'),
+        backgroundColor: Color.fromRGBO(41, 50, 65, 1),
+      ),
+      body: Container(
+        /*  constraints: BoxConstraints(maxHeight: 300, maxWidth: 200), */
+        color: Colors.green[200],
+        child: Container(
+          color: Colors.blue[200],
         ),
-        body: Center(
-            child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            DisplayCounter(count: _counter),
-            Incrementor(handleAdd: handleAdd)
-          ],
-        )));
+      ),
+    );
   }
 }
